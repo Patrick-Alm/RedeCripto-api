@@ -8,6 +8,7 @@
 	"dependencies": {
 		"@elysiajs/cors": "^1.2.0",
 		"@elysiajs/swagger": "^1.2.2",
+		"alchemy-sdk": "^3.5.6",
 		"drizzle-orm": "^0.40.1",
 		"drizzle-typebox": "^0.3.0",
 		"elysia": "latest",
