@@ -1,6 +1,8 @@
+import { relations } from 'drizzle-orm';
 import { integer, pgTable, text, timestamp } from 'drizzle-orm/pg-core';
+import { usersToWallets } from './users-to-wallets.schema';
 
-export const user = pgTable('user', {
+export const users = pgTable('users', {
 	id: integer().primaryKey().generatedAlwaysAsIdentity(),
 	clerkId: text('clerk_id').notNull().unique(),
 	email: text('email').unique(),
@@ -15,3 +17,7 @@ export const user = pgTable('user', {
 	createdAt: timestamp('created_at').notNull().defaultNow(),
 	updatedAt: timestamp('updated_at').notNull().defaultNow(),
 });
+
+export const userRelations = relations(users, ({ many }) => ({
+	usersToWallets: many(usersToWallets),
+}));
