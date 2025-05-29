@@ -2,6 +2,7 @@ import cors from '@elysiajs/cors';
 import swagger from '@elysiajs/swagger';
 import { ExampleModule } from '@modules/example.module';
 import { UserModule } from '@modules/user.module';
+import { WalletModule } from '@modules/wallet.module';
 import Elysia from 'elysia';
 import { Database } from '../database';
 
@@ -38,6 +39,7 @@ export class Application {
 
 		ExampleModule.setup(this._app);
 		UserModule.setup(this._app);
+		WalletModule.setup(this._app);
 	}
 
 	private async setupMiddleware() {
