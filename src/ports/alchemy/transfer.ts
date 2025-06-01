@@ -18,9 +18,9 @@ export class AlchemyTransfer {
 			category: [
 				AssetTransfersCategory.EXTERNAL,
 				AssetTransfersCategory.INTERNAL,
-				AssetTransfersCategory.ERC1155,
+				// AssetTransfersCategory.ERC1155,
 				AssetTransfersCategory.ERC20,
-				AssetTransfersCategory.ERC721,
+				// AssetTransfersCategory.ERC721,
 			],
 		});
 
@@ -34,9 +34,9 @@ export class AlchemyTransfer {
 			category: [
 				AssetTransfersCategory.EXTERNAL,
 				AssetTransfersCategory.INTERNAL,
-				AssetTransfersCategory.ERC1155,
+				// AssetTransfersCategory.ERC1155,
 				AssetTransfersCategory.ERC20,
-				AssetTransfersCategory.ERC721,
+				// AssetTransfersCategory.ERC721,
 			],
 		});
 
