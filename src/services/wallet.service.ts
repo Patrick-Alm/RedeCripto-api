@@ -83,8 +83,6 @@ export default class WalletService {
 			.where(eq(usersToWallets.userId, userId))
 			.leftJoin(wallets, eq(usersToWallets.walletId, wallets.id));
 
-		console.log(userWallets);
-
 		return userWallets;
 	}
 
