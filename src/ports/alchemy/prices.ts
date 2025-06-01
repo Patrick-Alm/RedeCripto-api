@@ -1,7 +1,7 @@
 import { type Alchemy, HistoricalPriceInterval } from 'alchemy-sdk';
 import { Tokens } from './utils';
 
-export class AlchemyTransfer {
+export class AlchemyPrice {
 	private alchemy: Alchemy;
 
 	constructor(alchemy: Alchemy) {
