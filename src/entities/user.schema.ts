@@ -1,5 +1,6 @@
 import { relations } from 'drizzle-orm';
-import { integer, pgTable, text, timestamp } from 'drizzle-orm/pg-core';
+import { integer, pgTable, text } from 'drizzle-orm/pg-core';
+import { timestamps } from './columns.helpers';
 import { usersToWallets } from './users-to-wallets.schema';
 
 export const users = pgTable('users', {
@@ -14,8 +15,7 @@ export const users = pgTable('users', {
 	imageUrl: text('image_url'),
 	lastSignInAt: text('last_sign_in_at'),
 	birthday: text('birthday'),
-	createdAt: timestamp('created_at').notNull().defaultNow(),
-	updatedAt: timestamp('updated_at').notNull().defaultNow(),
+	...timestamps,
 });
 
 export const userRelations = relations(users, ({ many }) => ({
