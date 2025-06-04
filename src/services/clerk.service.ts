@@ -22,7 +22,7 @@ export default class ClerkService {
 			case 'user.deleted':
 				return await this.userDeleted(body as UserDeletedWebhook);
 			default:
-				throw new Error('Invalid type');
+				return;
 		}
 	}
 
