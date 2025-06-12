@@ -34,6 +34,23 @@ export class TransferController extends BaseController {
 				return { error };
 			}
 		});
+		this.router.get('/user', async (ctx) => {
+			try {
+				const { userId } = ctx.store as { userId: number };
+
+				const response =
+					await this._transferService.getAllUserTransfers(userId);
+
+				ctx.set.status = 'OK';
+
+				return response;
+			} catch (error) {
+				console.log(error);
+
+				ctx.set.status = 500;
+				return { error };
+			}
+		});
 	}
 
 	setup() {
